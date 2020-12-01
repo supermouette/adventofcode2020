@@ -1,4 +1,5 @@
 from random import randrange
+from node_modules.utility import print
 
 
 def part1(nbs):
@@ -27,7 +28,6 @@ if __name__ == "__main__":
         lines = f.readlines()
     nbs = [int(line[:-1]) for line in lines]
     i, j = part1(nbs)
-    print(i*j)
-
+    print("La première réponse est "+str(i*j))
     i, j, k = part2(nbs)
-    print(i*j*k)
+    print("La seconde réponse est" + str(i*j*k))
