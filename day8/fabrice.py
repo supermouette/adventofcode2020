@@ -38,6 +38,7 @@ if __name__ == "__main__":
         swap(lines[to_swap])
         if i+1 == len(lines):
             print(i, acc, len(visited))
+            print(lines[to_swap])
             break
 
 
