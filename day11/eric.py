@@ -43,8 +43,6 @@ if __name__ == "__main__":
     imgs.append(next_step(imgs[-1]))
     while np.count_nonzero(imgs[-2] == imgs[-1]) != img.shape[0]*img.shape[1]:
         imgs.append(next_step(imgs[-1]))
-        # io.imshow(imgs[-2] == imgs[-1]); io.show();
-        # io.imshow(imgs[-1]) ;io.show()
 
     binary = imgs[-1] == OCCUPIED
     print(np.count_nonzero(binary))
