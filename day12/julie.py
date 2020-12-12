@@ -22,7 +22,7 @@ for move in moves:
     pos, facing = instruction[move[0]](move[1], pos, facing)
     history[0].append(pos[0])
     history[1].append(pos[1])
-print(pos, sum(pos))
+print(pos, abs(pos[0])+abs(pos[1]))
 plt.plot(history[0], history[1])
 plt.scatter([pos[0]], [pos[1]], s=64, c="g")
 plt.show()
