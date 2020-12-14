@@ -1,3 +1,5 @@
+from time import time
+t0 = time()
 with open("input.txt", "r") as f:
     lines = f.readlines()
 
@@ -20,3 +22,4 @@ while True:
     else:
         print(i)
         break
+print(time()-t0)
