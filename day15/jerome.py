@@ -6,17 +6,18 @@ n = 30000000  # part 2
 
 size = len(numbers)
 
-n_dict = {numbers[i]: i for i in range(size)}
-
+n_dict = {numbers[i]: i + 1 for i in range(size)}
+prev = numbers[-1]
 while size != n:
-    prev = numbers[-1]
+    # prev = numbers[-1]
     if prev in n_dict:
-        id = size - 1 - n_dict[prev]
+        new_num = size - n_dict[prev]
     else:
-        id = 0
-    n_dict[prev] = size - 1
+        new_num = 0
+    n_dict[prev] = size
     size += 1
-    numbers.append(id)
+    # numbers.append(new_num)
+    prev = new_num
 
-print(numbers[-1])
+print(new_num)
 print(time()-t0)
