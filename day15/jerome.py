@@ -9,14 +9,12 @@ size = len(numbers)
 n_dict = {numbers[i]: i + 1 for i in range(size)}
 prev = numbers[-1]
 while size != n:
-    # prev = numbers[-1]
     if prev in n_dict:
         new_num = size - n_dict[prev]
     else:
         new_num = 0
     n_dict[prev] = size
     size += 1
-    # numbers.append(new_num)
     prev = new_num
 
 print(new_num)
